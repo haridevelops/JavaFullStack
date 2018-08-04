@@ -1,0 +1,14 @@
+<div class="flex-container">
+  <form class="example-form">
+    <mat-form-field>
+      <input matInput type="text" #box (keyup.enter)="onEnter(box.value)">
+      <mat-placeholder>
+        Search
+      </mat-placeholder>
+    </mat-form-field>
+  </form>
+</div>
+<div *ngIf="search">
+<movie-thumbnail 
+  [movies]="movies"
+  [search]="search"></movie-thumbnail></div>

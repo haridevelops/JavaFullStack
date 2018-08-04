@@ -1,0 +1,7 @@
+<div class="movie-container">
+  <movie-thumbnail 
+    *ngFor="let movie of movies"
+    [movie]="movie"
+    (addMovie)="addMovie($event)"
+    [search]="false"></movie-thumbnail>
+</div>

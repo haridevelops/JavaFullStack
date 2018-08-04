@@ -1,0 +1,42 @@
+<ng-container *ngIf="search">
+    <mat-card class="card" *ngFor="let movie of movies">
+    <mat-card-header>
+        <mat-card-title>
+            {{ movie?.title }}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{ movie?.release_date }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <img class="image" mat-card-image [src]="movie?.poster_path" alt="movie?.title">
+    <mat-card-content class="overview">
+        {{ movie?.overview }}
+    </mat-card-content>
+    <mat-card-actions class="actions">
+        <button *ngIf="!useWatchlistAPI" mat-button (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
+        <button *ngIf="useWatchlistAPI" mat-button (click)="UpdateWatchlist('update')" color="primary">Update</button>
+        <button *ngIf="useWatchlistAPI" mat-button (click)="deleteFromWatchlist()" color="primary">Delete</button>
+    </mat-card-actions>
+</mat-card>
+</ng-container>
+<ng-container *ngIf="!search">
+        <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>
+                {{ movie?.title }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{ movie?.release_date }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <img class="image" mat-card-image [src]="movie?.poster_path" alt="movie?.title">
+        <mat-card-content class="overview">
+            {{ movie?.overview }}
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button *ngIf="!useWatchlistAPI" mat-button (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
+            <button *ngIf="useWatchlistAPI" mat-button (click)="UpdateWatchlist('update')" color="primary">Update</button>
+            <button *ngIf="useWatchlistAPI" mat-button (click)="deleteFromWatchlist()" color="primary">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+    </ng-container>

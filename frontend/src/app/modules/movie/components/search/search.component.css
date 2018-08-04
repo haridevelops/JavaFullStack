@@ -1,0 +1,23 @@
+.card {
+    max-width: 400px;
+    margin: 10px;
+}
+
+.overview {
+    height: 100px;
+    overflow-x: hidden;
+
+}
+
+.overview::-webkit-scrollbar {
+    width: 5px;
+    background: gray;
+}
+
+.image {
+    height: 600px;
+}
+
+.actions {
+    text-align: right;
+}

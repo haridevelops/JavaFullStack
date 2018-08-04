@@ -1,0 +1,9 @@
+.movie-container {
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    height: fit-content max-content;
+    height: 100vh;
+}
