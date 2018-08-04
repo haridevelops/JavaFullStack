@@ -14,7 +14,6 @@ variables:
    MYSQL_CI_URL: jdbc:mysql://mysql/moviedb
 cache:
  paths:
-  - .m2/repository/
   - target
 maven-test:
    stage: build
