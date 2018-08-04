@@ -7,11 +7,11 @@ stages:
 services:
   - mysql:5.5
 variables:
-    MYSQL_DATABASE: moviedb
-	MYSQL_ROOT_PASSWORD: root
-    MYSQL_USER: root
-    MYSQL_PASSWORD: root
-	MYSQL_CI_URL: jdbc:mysql://mysql/moviedb
+   MYSQL_DATABASE: moviedb
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_USER: root
+   MYSQL_PASSWORD: root
+   MYSQL_CI_URL: jdbc:mysql://mysql/moviedb
 cache:
  paths:
   - .m2/repository/
