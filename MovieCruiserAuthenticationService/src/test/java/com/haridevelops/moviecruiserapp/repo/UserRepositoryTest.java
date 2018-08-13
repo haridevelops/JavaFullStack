@@ -42,5 +42,11 @@ public class UserRepositoryTest {
 		assertThat(op.equals(user));
 	}
 	
+	@Test
+	public void testLoginUserSuccess() {
+		userRepository.save(user);
+		Optional<UserBean> op = userRepository.findById(user.getUserId());
+		assertThat(op.equals(user));
+	}
 	
 }
