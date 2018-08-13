@@ -16,7 +16,10 @@ public class Movie {
 	@Column(name = "id")
 	private int id;
 	
+	@Column(name="movieId")
 	private String movieId;
+	
+	@Column(name="name")
 	private String name;
 	
 	public String getName() {
@@ -37,10 +40,15 @@ public class Movie {
 		this.poster_path = poster_path;
 		this.userId = userId;
 	}
+	@Column(name="title")
 	private String title;
+	@Column(name="release_date")
 	private String release_date;
+	@Column(name="movieComments")
 	private String movieComments;
+	@Column(name="poster_path")
 	private String poster_path;
+	@Column(name="userId")
 	private String userId;
 	
 	public String getMovieId() {
