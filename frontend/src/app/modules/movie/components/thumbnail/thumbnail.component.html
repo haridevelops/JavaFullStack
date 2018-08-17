@@ -1,7 +1,7 @@
 <ng-container *ngIf="search">
     <mat-card class="card" *ngFor="let movie of movies">
     <mat-card-header>
-        <mat-card-title>
+        <mat-card-title class="movieTitle">
             {{ movie?.title }}
         </mat-card-title>
         <mat-card-subtitle>
@@ -13,7 +13,7 @@
         {{ movie?.overview }}
     </mat-card-content>
     <mat-card-actions class="actions">
-        <button *ngIf="!useWatchlistAPI" mat-button (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
+        <button *ngIf="!useWatchlistAPI" mat-button class="addButton" (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
         <button *ngIf="useWatchlistAPI" mat-button (click)="UpdateWatchlist('update')" color="primary">Update</button>
         <button *ngIf="useWatchlistAPI" mat-button (click)="deleteFromWatchlist()" color="primary">Delete</button>
     </mat-card-actions>
@@ -34,7 +34,7 @@
             {{ movie?.overview }}
         </mat-card-content>
         <mat-card-actions class="actions">
-            <button *ngIf="!useWatchlistAPI" mat-button (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
+            <button *ngIf="!useWatchlistAPI" class="addButton" mat-button (click)="addMovieToWatchlist()" color="primary">Add to Watchlist</button>
             <button *ngIf="useWatchlistAPI" mat-button (click)="UpdateWatchlist('update')" color="primary">Update</button>
             <button *ngIf="useWatchlistAPI" mat-button (click)="deleteFromWatchlist()" color="primary">Delete</button>
         </mat-card-actions>

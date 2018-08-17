@@ -33,7 +33,7 @@ export class MovieDialogComponent implements OnInit {
   
   onUpdate() {
     console.log('comments: ', this.comments);
-    this.movie.comments = this.comments;
+    this.movie.movieComments = this.comments;
     this.dialogRef.close();
     this.movieService.updateComments(this.movie).subscribe(
       movie => {

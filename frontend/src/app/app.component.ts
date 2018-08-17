@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   <mat-toolbar color="primary">
       <span>Movie Cruiser</span>
       <button mat-button [routerLink]="['/movies/popular']">Popular Movies</button>    
-      <button mat-button [routerLink]="['/movies/toprated']">Top Rated Movies</button>
+      <button mat-button class="topRated" [routerLink]="['/movies/toprated']">Top Rated Movies</button>
       <button mat-button [routerLink]="['/movies/watchlist']">Watchlist</button>
-      <button mat-button [routerLink]="['/movies/search']">Search</button>
+      <button mat-button class="search-button" [routerLink]="['/movies/search']">Search</button>
       <button mat-button (click)="logout()">Logout</button>
   </mat-toolbar>
   <router-outlet></router-outlet>

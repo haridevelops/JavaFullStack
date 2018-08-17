@@ -1,7 +1,7 @@
 version: '3'
 services: 
   user-app:
-    image: haridevelops/finalversionmoviecruiser:user-image
+    image: haridevelops/finalversionmoviecruiser:backendauth-image
     restart: always
     network_mode: host
     ports:
@@ -11,7 +11,7 @@ services:
     depends_on:
      - movie-mysql
   movie-app:
-    image: haridevelops/finalversionmoviecruiser:movie-image
+    image: haridevelops/finalversionmoviecruiser:backend-image
     restart: always
     network_mode: host
     ports:
@@ -31,7 +31,7 @@ services:
       MYSQL_PASSWORD: root123
       MYSQL_DATABASE: moviedb
   angular:
-    image: haridevelops/finalversionmoviecruiser:angular-image
+    image: haridevelops/finalversionmoviecruiser:angulardist-image
     network_mode: host
     container_name: angular-docker
     ports:

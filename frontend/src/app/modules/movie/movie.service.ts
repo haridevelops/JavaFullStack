@@ -30,8 +30,16 @@ export class MovieService {
       .pipe(
         retry(3),
         map(this.pickResultsFromResponse),
-        map(this.transformPosterPath.bind(this))
+        map(this.transformPosterPath.bind(this)),
+        map(this.transformIDtoMovieId.bind(this))
       );
+  }
+
+  transformIDtoMovieId(movies): Array<Movie>  {
+    return movies.map(movie => {
+      movie.movieId = movie.id;
+      return movie;
+    });
   }
 
   transformPosterPath(movies): Array<Movie> {
@@ -42,7 +50,7 @@ export class MovieService {
   }
 
   pickResultsFromResponse(response) {
-    console.log(response)
+    
     return response['results'];
   }
 
@@ -64,6 +72,7 @@ export class MovieService {
   }
 
   updateComments(movie) {
+    console.log(movie);
     const url = `${this.springEndppoint}/movie/${movie.id}`;
     return this.http.put(url, movie);
   }
