@@ -2,7 +2,7 @@ package com.haridevelops.moviecruiserapp.services;
 
 import java.util.Map;
 
-import com.haridevelops.moviecruiserapp.repo.model.UserBean;
+import com.haridevelops.moviecruiserapp.domain.UserBean;
 
 public interface SecurityTokenGenerator {
 	

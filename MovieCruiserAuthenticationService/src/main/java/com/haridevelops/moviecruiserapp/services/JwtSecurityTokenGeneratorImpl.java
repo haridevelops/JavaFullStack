@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.haridevelops.moviecruiserapp.repo.model.UserBean;
+import com.haridevelops.moviecruiserapp.domain.UserBean;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.haridevelops.moviecruiserapp.exception.UserAlreadyExistsException;
 import com.haridevelops.moviecruiserapp.exception.UserNotFoundException;
 import com.haridevelops.moviecruiserapp.repo.UserRepository;
-import com.haridevelops.moviecruiserapp.repo.model.UserBean;
+import com.haridevelops.moviecruiserapp.domain.UserBean;
 
 @Service
 public class UserServiceImpl implements UserService{

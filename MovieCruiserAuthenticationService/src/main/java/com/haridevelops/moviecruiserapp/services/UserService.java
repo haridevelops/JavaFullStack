@@ -2,7 +2,7 @@ package com.haridevelops.moviecruiserapp.services;
 
 import com.haridevelops.moviecruiserapp.exception.UserAlreadyExistsException;
 import com.haridevelops.moviecruiserapp.exception.UserNotFoundException;
-import com.haridevelops.moviecruiserapp.repo.model.UserBean;
+import com.haridevelops.moviecruiserapp.domain.UserBean;
 
 public interface UserService {
 

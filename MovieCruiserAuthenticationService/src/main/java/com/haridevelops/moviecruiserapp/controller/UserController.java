@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.haridevelops.moviecruiserapp.exception.UserAlreadyExistsException;
 import com.haridevelops.moviecruiserapp.exception.UserNotFoundException;
-import com.haridevelops.moviecruiserapp.repo.model.UserBean;
+import com.haridevelops.moviecruiserapp.domain.UserBean;
 import com.haridevelops.moviecruiserapp.services.SecurityTokenGenerator;
 import com.haridevelops.moviecruiserapp.services.UserService;
 

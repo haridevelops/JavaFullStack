@@ -1,4 +1,4 @@
-package com.haridevelops.moviecruiserapp.repo.model;
+package com.haridevelops.moviecruiserapp.domain;
 
 import java.util.Date;
 
